@@ -41,6 +41,12 @@
             textBoxSoyad = new TextBox();
             textBoxTelefon = new TextBox();
             button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            lblHobi = new Label();
+            button6 = new Button();
+            textBoxHobi = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -76,7 +82,7 @@
             // label4
             // 
             label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(12, 189);
+            label4.Location = new Point(12, 175);
             label4.Name = "label4";
             label4.Size = new Size(104, 46);
             label4.TabIndex = 3;
@@ -117,7 +123,7 @@
             // 
             lblId.AutoSize = true;
             lblId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblId.Location = new Point(132, 209);
+            lblId.Location = new Point(138, 190);
             lblId.Name = "lblId";
             lblId.Size = new Size(14, 21);
             lblId.TabIndex = 7;
@@ -125,7 +131,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(55, 250);
+            button1.Location = new Point(12, 250);
             button1.Name = "button1";
             button1.Size = new Size(140, 23);
             button1.TabIndex = 8;
@@ -164,11 +170,72 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // button3
+            // 
+            button3.Location = new Point(556, 68);
+            button3.Name = "button3";
+            button3.Size = new Size(125, 121);
+            button3.TabIndex = 13;
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(158, 250);
+            button4.Name = "button4";
+            button4.Size = new Size(140, 23);
+            button4.TabIndex = 14;
+            button4.Text = "Silme Alanı";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(88, 224);
+            button5.Name = "button5";
+            button5.Size = new Size(140, 23);
+            button5.TabIndex = 15;
+            button5.Text = "Hobi Alanı";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // lblHobi
+            // 
+            lblHobi.BackColor = SystemColors.ActiveCaption;
+            lblHobi.Location = new Point(11, 284);
+            lblHobi.Name = "lblHobi";
+            lblHobi.Size = new Size(181, 188);
+            lblHobi.TabIndex = 16;
+            lblHobi.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(213, 306);
+            button6.Name = "button6";
+            button6.Size = new Size(75, 47);
+            button6.TabIndex = 17;
+            button6.Text = "Ekle";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // textBoxHobi
+            // 
+            textBoxHobi.Location = new Point(198, 359);
+            textBoxHobi.Name = "textBoxHobi";
+            textBoxHobi.Size = new Size(100, 23);
+            textBoxHobi.TabIndex = 18;
+            // 
             // UserInfoForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(248, 276);
+            ClientSize = new Size(310, 276);
+            Controls.Add(textBoxHobi);
+            Controls.Add(button6);
+            Controls.Add(lblHobi);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(textBoxTelefon);
             Controls.Add(textBoxSoyad);
@@ -204,5 +271,11 @@
         private TextBox textBoxSoyad;
         private TextBox textBoxTelefon;
         private Button button2;
+        private Button button3;
+        private Button button4;
+        private Button button5;
+        private Label lblHobi;
+        private Button button6;
+        private TextBox textBoxHobi;
     }
 }
