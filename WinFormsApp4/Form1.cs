@@ -1,3 +1,5 @@
+using AjandanSistemi;
+
 namespace WinFormsApp4
 {
     public partial class Form1 : Form
@@ -19,6 +21,14 @@ namespace WinFormsApp4
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            Person person = new Person();   
+            Ajanda ajanda = new Ajanda();
+
+            ajanda.AddPerson();
+            ajanda.DeletePerson();
+            
+
             if (!File.Exists(Path))
             {
                 FileStream fs = File.Create(Path);
