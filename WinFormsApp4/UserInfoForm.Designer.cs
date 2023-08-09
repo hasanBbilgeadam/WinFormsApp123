@@ -36,6 +36,11 @@
             lblSoyAd = new Label();
             lblTelefon = new Label();
             lblId = new Label();
+            button1 = new Button();
+            textBoxAd = new TextBox();
+            textBoxSoyad = new TextBox();
+            textBoxTelefon = new TextBox();
+            button2 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -118,11 +123,57 @@
             lblId.TabIndex = 7;
             lblId.Text = " ";
             // 
+            // button1
+            // 
+            button1.Location = new Point(55, 250);
+            button1.Name = "button1";
+            button1.Size = new Size(140, 23);
+            button1.TabIndex = 8;
+            button1.Text = "Güncelleme Alanı";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // textBoxAd
+            // 
+            textBoxAd.Location = new Point(371, 26);
+            textBoxAd.Name = "textBoxAd";
+            textBoxAd.Size = new Size(100, 23);
+            textBoxAd.TabIndex = 9;
+            // 
+            // textBoxSoyad
+            // 
+            textBoxSoyad.Location = new Point(371, 85);
+            textBoxSoyad.Name = "textBoxSoyad";
+            textBoxSoyad.Size = new Size(100, 23);
+            textBoxSoyad.TabIndex = 10;
+            // 
+            // textBoxTelefon
+            // 
+            textBoxTelefon.Location = new Point(371, 147);
+            textBoxTelefon.Name = "textBoxTelefon";
+            textBoxTelefon.Size = new Size(100, 23);
+            textBoxTelefon.TabIndex = 11;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(354, 202);
+            button2.Name = "button2";
+            button2.Size = new Size(117, 62);
+            button2.TabIndex = 12;
+            button2.Text = "GÜNCELLE";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // UserInfoForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(252, 276);
+            ClientSize = new Size(248, 276);
+            Controls.Add(button2);
+            Controls.Add(textBoxTelefon);
+            Controls.Add(textBoxSoyad);
+            Controls.Add(textBoxAd);
+            Controls.Add(button1);
             Controls.Add(lblId);
             Controls.Add(lblTelefon);
             Controls.Add(lblSoyAd);
@@ -148,5 +199,10 @@
         private Label lblSoyAd;
         private Label lblTelefon;
         private Label lblId;
+        private Button button1;
+        private TextBox textBoxAd;
+        private TextBox textBoxSoyad;
+        private TextBox textBoxTelefon;
+        private Button button2;
     }
 }

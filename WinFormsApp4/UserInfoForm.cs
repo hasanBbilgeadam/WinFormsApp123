@@ -27,9 +27,12 @@ namespace WinFormsApp4
             lblTelefon.Text = arr[2];
             lblId.Text = arr[3];
 
+            textBoxAd.Text = arr[0];
+            textBoxSoyad.Text = arr[1];
+            textBoxTelefon.Text = arr[2];
+
 
         }
-
         public string[] SearchById(int id)
         {
 
@@ -53,6 +56,72 @@ namespace WinFormsApp4
             streamReader.Close();
             return null;
 
+        }
+        bool open = false;
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            open = !open;
+
+            if (open)
+            {
+                this.ClientSize = new Size(480, 276);
+                return;
+            }
+            this.ClientSize = new Size(245, 276);
+        }
+
+
+        private void UpdateUser(string id, string name, string surname, string phonenumber)
+        {
+
+
+
+            StreamReader sr = new StreamReader(Form1.Path);
+
+            List<string> kişiler = new();
+
+
+            while (!sr.EndOfStream)
+            {
+
+                kişiler.Add(sr.ReadLine());
+            }
+            sr.Close();
+
+
+
+
+
+            for (int i = 0; i < kişiler.Count; i++)
+            {
+                if (kişiler[i].Split('|')[3] == id)
+                {
+                    kişiler[i] = name + "|" + surname + "|" + phonenumber + "|" + id;
+                    break;
+                }
+            }
+
+
+
+            StreamWriter sw = new StreamWriter(Form1.Path);
+            sw.Write("");
+            sw.Close();
+
+            StreamWriter sw2 = new StreamWriter(Form1.Path, true);
+
+            foreach (var item in kişiler)
+            {
+                sw2.WriteLine(item);
+            }
+
+            sw2.Close();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UpdateUser(ID.ToString(), textBoxAd.Text, textBoxSoyad.Text, textBoxTelefon.Text);
         }
     }
 }
